@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+
+$primary: #456379;
+$secondary: #548CA8;
+$dark: #334257;
+$light: #EEEEEE;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 40px;
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(45deg, $dark, $secondary);
+}
+
+.container {
+    min-height: calc(100vh - 40px * 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+
+    .login {
+        display: flex;
+        padding: 40px;
+        min-width: 450px;
+        max-width: 600px;
+        width: 60%;
+        border-radius: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $light;
+        position: relative;
+        &::before {
+            content:'';
+            position: absolute;
+            border-radius: 10px;
+            inset: 0;
+            transform: rotate(-5deg);
+            background: $light;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        
+        &-header {
+           width: calc(100% - 10px *2);
+           display: flex;
+           justify-content: center;
+           align-content: end;
+           h1 {
+             font-size: 2.5em;
+             margin: 0;
+             color: $primary;
+           }
+        }
+
+        &-content {
+            width: 100%;
+            display: flex;
+            .login-form {
+                display: flex;
+                gap: 20px;
+                width:100%;
+                padding: 20px 40px;
+                flex-direction: column;
+
+                .form-item {
+                    display: flex;
+                    flex-direction: column;
+                    color: $primary;
+                    background-color: $light;
+                
+                    &:hover {
+                        color: $secondary;
+                    }
+                
+                    label:not(.checkbox-label) {
+                    display: inline-block;
+                    background-color: $light;
+                    margin-bottom: 10px;
+                    position: absolute;
+                    padding: 0 10px;
+                    transform: translate(2em, -0.6em);
+                    font-size: 0.9em;
+                    }
+                
+                    input[type="text"],
+                    input[type="password"] {
+                    border: 1px solid $primary;
+                    height: 55px;
+                    padding: 0 2rem;
+                    width: 100%;
+                    outline: none;
+                    background-color: $light;
+                    font-size: 18px;
+                    border-radius: 100px;
+
+                    &:-webkit-autofill { 
+                        -webkit-background-clip: text;
+                    }
+                    }
+                
+                    .checkbox {
+                        display: flex;
+                        align-items: center;
+                
+                        &-label {
+                            padding-left: 10px;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                
+                
+                        input[type="checkbox"] {
+                            margin: 0;
+                            padding: 0;
+                            width: 20px;
+                            height: 20px;
+                            accent-color: $primary;
+                            border-color: $primary;
+                            &:hover{
+                                accent-color: $secondary;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                
+                button {
+                    border: none;
+                    background: $primary;
+                    color: $light;
+                    padding: 1rem;
+                    border-radius: 100px;
+                    text-align: center;
+                    font-size: 1em;
+                    height: 55px;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        background: $secondary;
+                    }
+                }
+            }   
+        }
+
+        &-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 0 40px;
+            gap: 15px;
+
+            a {
+                display: flex;
+                width: 50%;
+                min-width: 220px;
+                height: 40px;
+                text-decoration: none;
+                color: $primary;
+                // border: 1px solid $primary;
+                border-radius: 100px;
+                justify-content: start;
+                padding-right: 20px;
+                align-items: center;
+                gap: 15px;
+                transition: 0.3s;
+
+                .image {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $primary;
+                    border-radius: 100px;    
+                    img {
+                        padding: 6px;
+                        width: 34px;
+                        height: 34px;
+                    }
+                }
+
+                &:hover {
+                    background-color: $secondary;
+                    color: $light;
+                    .image {
+                        background-color: $secondary;
+                    }
+
+                }
+                
+            }
+        }
+
+    }
+
+}
