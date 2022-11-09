@@ -142,36 +142,75 @@ body {
   padding: 0 40px;
   gap: 15px;
 }
-.container .login-footer a {
+.container .login-footer .line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  color: #548CA8;
+  /*  new lines  */
+}
+.container .login-footer .line:before {
+  content: " ";
+  display: block;
+  height: 0.5px;
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #548CA8;
+}
+.container .login-footer .line:after {
+  content: " ";
+  display: block;
+  height: 0.5px;
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background: #548CA8;
+}
+.container .login-footer .forgot-password {
+  display: flex;
+  justify-content: center;
+}
+.container .login-footer .forgot-password a {
+  text-decoration: none;
+  color: #456379;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.container .login-footer .social-login {
   display: flex;
   width: 50%;
   min-width: 220px;
   height: 40px;
-  text-decoration: none;
-  color: #456379;
-  border-radius: 100px;
   justify-content: start;
-  padding-right: 20px;
   align-items: center;
-  gap: 15px;
   transition: 0.3s;
 }
-.container .login-footer a .image {
+.container .login-footer .social-login a {
+  text-decoration: none;
+  padding-left: 15px;
+  color: #456379;
+  transition: ease 0.3s;
+}
+.container .login-footer .social-login .image {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #456379;
   border-radius: 100px;
 }
-.container .login-footer a .image img {
+.container .login-footer .social-login .image img {
   padding: 6px;
   width: 34px;
   height: 34px;
 }
-.container .login-footer a:hover {
-  background-color: #548CA8;
-  color: #EEEEEE;
+.container .login-footer .social-login:hover {
+  color: #548CA8;
 }
-.container .login-footer a:hover .image {
+.container .login-footer .social-login:hover .image {
   background-color: #548CA8;
 }
