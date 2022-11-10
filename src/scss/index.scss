@@ -200,6 +200,10 @@ body {
                     color: $primary;
                     font-size: 0.9rem;
                     font-weight: 300;
+
+                    &:hover {
+                        color: $secondary;
+                    }
                 }
             }
             .social-login {
@@ -233,7 +237,9 @@ body {
                 }
 
                 &:hover {
-                    color: $secondary;
+                    a { 
+                        color: $secondary;
+                    }
                     .image {
                         background-color: $secondary;
                     }
