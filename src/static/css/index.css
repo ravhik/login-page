@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-weight: 400;
   font-family: "Nunito", sans-serif;
-  background: linear-gradient(45deg, #334257, #548CA8);
+  background: linear-gradient(45deg, #334257, #548ca8);
 }
 
 .container {
@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   position: relative;
 }
 .container .login::before {
@@ -38,7 +38,7 @@ body {
   border-radius: 10px;
   inset: 0;
   transform: rotate(-5deg);
-  background: #EEEEEE;
+  background: #eeeeee;
   opacity: 0.3;
   z-index: -1;
 }
@@ -64,50 +64,62 @@ body {
   padding: 20px 40px;
   flex-direction: column;
 }
-.container .login-content .login-form .form-item {
+.container .login-content .login-form .form-control {
   display: flex;
   flex-direction: column;
   color: #456379;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
-.container .login-content .login-form .form-item:hover {
-  color: #548CA8;
+.container .login-content .login-form .form-control:hover {
+  color: #548ca8;
 }
-.container .login-content .login-form .form-item label:not(.checkbox-label) {
+.container .login-content .login-form .form-control label:not(.checkbox-label) {
   display: inline-block;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   margin-bottom: 10px;
   position: absolute;
   padding: 0 10px;
   transform: translate(2em, -0.6em);
   font-size: 0.9em;
 }
-.container .login-content .login-form .form-item input[type=text],
-.container .login-content .login-form .form-item input[type=password] {
+.container .login-content .login-form .form-control label:not(.checkbox-label).invalid {
+  color: #b50505;
+}
+.container .login-content .login-form .form-control input[type=text],
+.container .login-content .login-form .form-control input[type=password] {
   border: 1px solid #456379;
   height: 55px;
   padding: 0 2rem;
   width: 100%;
   outline: none;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   font-size: 18px;
   border-radius: 100px;
 }
-.container .login-content .login-form .form-item input[type=text]:-webkit-autofill,
-.container .login-content .login-form .form-item input[type=password]:-webkit-autofill {
+.container .login-content .login-form .form-control input[type=text]:-webkit-autofill,
+.container .login-content .login-form .form-control input[type=password]:-webkit-autofill {
   -webkit-background-clip: text;
 }
-.container .login-content .login-form .form-item .checkbox {
+.container .login-content .login-form .form-control input[type=text].invalid,
+.container .login-content .login-form .form-control input[type=password].invalid {
+  border-color: #b50505;
+}
+.container .login-content .login-form .form-control .validation-message {
+  padding-left: 40px;
+  color: #b50505;
+  font-size: 0.8em;
+}
+.container .login-content .login-form .form-control .checkbox {
   display: flex;
   align-items: center;
 }
-.container .login-content .login-form .form-item .checkbox-label {
+.container .login-content .login-form .form-control .checkbox-label {
   padding-left: 10px;
 }
-.container .login-content .login-form .form-item .checkbox-label:hover {
+.container .login-content .login-form .form-control .checkbox-label:hover {
   cursor: pointer;
 }
-.container .login-content .login-form .form-item .checkbox input[type=checkbox] {
+.container .login-content .login-form .form-control .checkbox input[type=checkbox] {
   margin: 0;
   padding: 0;
   width: 20px;
@@ -115,14 +127,14 @@ body {
   accent-color: #456379;
   border-color: #456379;
 }
-.container .login-content .login-form .form-item .checkbox input[type=checkbox]:hover {
-  accent-color: #548CA8;
+.container .login-content .login-form .form-control .checkbox input[type=checkbox]:hover {
+  accent-color: #548ca8;
   cursor: pointer;
 }
 .container .login-content .login-form button {
   border: none;
   background: #456379;
-  color: #EEEEEE;
+  color: #eeeeee;
   padding: 1rem;
   border-radius: 100px;
   text-align: center;
@@ -131,7 +143,7 @@ body {
   cursor: pointer;
 }
 .container .login-content .login-form button:hover {
-  background: #548CA8;
+  background: #548ca8;
 }
 .container .login-footer {
   display: flex;
@@ -148,7 +160,7 @@ body {
   justify-content: center;
   width: 100%;
   position: relative;
-  color: #548CA8;
+  color: #548ca8;
   /*  new lines  */
 }
 .container .login-footer .line:before {
@@ -159,7 +171,7 @@ body {
   position: absolute;
   top: 50%;
   left: 0;
-  background: #548CA8;
+  background: #548ca8;
 }
 .container .login-footer .line:after {
   content: " ";
@@ -169,7 +181,7 @@ body {
   position: absolute;
   top: 50%;
   right: 0;
-  background: #548CA8;
+  background: #548ca8;
 }
 .container .login-footer .forgot-password {
   display: flex;
@@ -182,7 +194,7 @@ body {
   font-weight: 300;
 }
 .container .login-footer .forgot-password a:hover {
-  color: #548CA8;
+  color: #548ca8;
 }
 .container .login-footer .social-login {
   display: flex;
@@ -212,8 +224,8 @@ body {
   height: 34px;
 }
 .container .login-footer .social-login:hover a {
-  color: #548CA8;
+  color: #548ca8;
 }
 .container .login-footer .social-login:hover .image {
-  background-color: #548CA8;
+  background-color: #548ca8;
 }
