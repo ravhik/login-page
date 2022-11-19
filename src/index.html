@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="./static/css/index.css" />
-		<title>SignIn</title>
-	</head>
 
-	<body>
-		<div class="container">
-			<div class="login">
-				<div class="login-header">
-					<h1>Sign In</h1>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="./static/css/index.css" />
+	<title>SignIn</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="login">
+			<div class="login-header">
+				<h1>Sign In</h1>
+			</div>
+			<div class="login-content">
+				<form class="login-form" id="login-form">
+					<div class="form-control">
+						<label for="email">Enter Email</label>
+						<input type="text" name="email" id="email" />
+						<span class="validation-message"></span>
+					</div>
+					<div class="form-control">
+						<label for="password">Enter Password</label>
+						<input type="password" name="password" id="password" />
+						<span class="validation-message"></span>
+					</div>
+					<div class="form-control">
+						<div class="checkbox">
+							<input type="checkbox" name="keepMeSignedIn" id="keepMeSignedIn" />
+							<label for="keepMeSignedIn" class="checkbox-label">Keep me signed in</label>
+						</div>
+					</div>
+					<button type="submit" id="submit">Sign In</button>
+				</form>
+			</div>
+			<div class="login-footer">
+				<div class="line">or</div>
+				<div class="social-login">
+					<div class="image">
+						<img src="./static/svg/facebook-logo.svg" alt="facebook icon" />
+					</div>
+					<a href="#">Login with Facebook</a>
 				</div>
-				<div class="login-content">
-					<form class="login-form" id="login-form">
-						<div class="form-control">
-							<label for="email">Enter Email</label>
-							<input type="text" name="email" id="email" />
-							<span class="validation-message"></span>
-						</div>
-						<div class="form-control">
-							<label for="password">Enter Password</label>
-							<input type="password" name="password" id="password" />
-							<span class="validation-message"></span>
-						</div>
-						<div class="form-control">
-							<div class="checkbox">
-								<input
-									type="checkbox"
-									name="keepMeSignedIn"
-									id="keepMeSignedIn"
-								/>
-								<label for="keepMeSignedIn" class="checkbox-label"
-									>Keep me signed in</label
-								>
-							</div>
-						</div>
-						<button type="submit" id="submit">Sign In</button>
-					</form>
+				<div class="social-login">
+					<div class="image">
+						<img src="./static/svg/google-logo.svg" alt="facebook icon" />
+					</div>
+					<a href="#">Login with Google</a>
 				</div>
-				<div class="login-footer">
-					<div class="line">or</div>
-					<div class="social-login">
-						<div class="image">
-							<img src="./static/svg/facebook-logo.svg" alt="facebook icon" />
-						</div>
-						<a href="#">Login with Facebook</a>
-					</div>
-					<div class="social-login">
-						<div class="image">
-							<img src="./static/svg/google-logo.svg" alt="facebook icon" />
-						</div>
-						<a href="#">Login with Google</a>
-					</div>
-					<div class="forgot-password">
-						<a href="#"> Forgot password?</a>
-					</div>
+				<div class="forgot-password">
+					<a href="#"> Forgot password?</a>
 				</div>
 			</div>
 		</div>
-	</body>
-	<script src="./js/index.js" type="module" defer></script>
+	</div>
+</body>
+<script src="./js/index.js" type="module" defer></script>
+
 </html>

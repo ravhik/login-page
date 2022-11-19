@@ -6,8 +6,7 @@ import { validatePassword } from "./validate-password.js";
 
 const validationTriggers = ["focusout", "input"];
 
-export const createLoginFormEventListners = () =>
-{
+export const createLoginFormEventListners = () => {
 	validationTriggers.forEach((event) => {
 		emailInput.addEventListener(event, () => {
 			inputValidationHandler(emailInput, validateEmail());
@@ -16,6 +15,6 @@ export const createLoginFormEventListners = () =>
 			inputValidationHandler(passwordInput, validatePassword());
 		});
 	});
-	
+
 	loginForm.addEventListener("submit", createLoginFormSubmitHandler);
-}
+};

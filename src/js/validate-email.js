@@ -1,5 +1,8 @@
 import { emailInput } from "./dom.js";
-import { EMAIL_INVALID_PATTERN, EMAIL_REQUIRED } from "./validation-messages.js";
+import {
+	EMAIL_INVALID_PATTERN,
+	EMAIL_REQUIRED,
+} from "./validation-messages.js";
 import { isEmailValid, isRequired } from "./validation-utils.js";
 
 export const validateEmail = () => {

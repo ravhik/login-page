@@ -1,5 +1,5 @@
 import { passwordInput } from "./dom.js";
-import { PASSWORD_REQUIRED} from "./validation-messages.js"
+import { PASSWORD_REQUIRED } from "./validation-messages.js";
 import { isRequired } from "./validation-utils.js";
 
 export const validatePassword = () => {

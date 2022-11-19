@@ -4,7 +4,9 @@ export const inputValidationHandler = (inputElement, validationResult) => {
 
 	const parentElement = inputElement.parentElement;
 	const labelElement = parentElement.querySelector("label");
-	const validationMessageElement = parentElement.querySelector(".validation-message");
+	const validationMessageElement = parentElement.querySelector(
+		".validation-message"
+	);
 
 	inputElement.className = className;
 	validationMessageElement.textContent = validationMessage;
