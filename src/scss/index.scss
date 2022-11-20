@@ -26,7 +26,7 @@ body {
 	width: 100%;
 	overflow: hidden;
 
-	.login {
+	.card {
 		display: flex;
 		padding: 40px;
 		min-width: 450px;
@@ -143,6 +143,22 @@ body {
 							}
 						}
 					}
+					.forgot-password {
+						padding-left: 20px;
+						display: flex;
+						justify-content: start;
+		
+						a {
+							text-decoration: none;
+							color: $primary;
+							font-size: 0.9rem;
+							font-weight: 300;
+		
+							&:hover {
+								color: $secondary;
+							}
+						}
+					}
 				}
 
 				button {
@@ -170,7 +186,7 @@ body {
 			justify-content: center;
 			width: 100%;
 			padding: 0 40px;
-			gap: 15px;
+			// gap: 15px;
 
 			.line {
 				display: flex;
@@ -203,60 +219,51 @@ body {
 				}
 			}
 
-			.forgot-password {
+			.social-login {
 				display: flex;
+				padding-top: 10px;
+				width: 50%;
+				min-width: 220px;
 				justify-content: center;
+				align-items: center;
+				transition: 0.3s;
+				gap: 30px;
 
 				a {
+					border-radius: 100px;
 					text-decoration: none;
 					color: $primary;
-					font-size: 0.9rem;
-					font-weight: 300;
+					transition: ease 0.3s;
+					&:hover {
+						color: $secondary;
+					}
+				}
 
+				}
+			}
+			.sign-up {
+				padding: 0;
+				height: 30px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				p {
+
+					font-size: 0.9em;
+					color: $primary
+				}
+				
+				a {
+					padding-left: 5px;
+					font-weight: 600;
+					border-radius: 100px;
+					text-decoration: none;
+					color: $dark;
+					transition: ease 0.3s;
 					&:hover {
 						color: $secondary;
 					}
 				}
 			}
-			.social-login {
-				display: flex;
-				width: 50%;
-				min-width: 220px;
-				height: 40px;
-				justify-content: start;
-				align-items: center;
-				transition: 0.3s;
-
-				a {
-					text-decoration: none;
-					padding-left: 15px;
-					color: $primary;
-					transition: ease 0.3s;
-				}
-
-				.image {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					background-color: $primary;
-					border-radius: 100px;
-
-					img {
-						padding: 6px;
-						width: 34px;
-						height: 34px;
-					}
-				}
-
-				&:hover {
-					a {
-						color: $secondary;
-					}
-					.image {
-						background-color: $secondary;
-					}
-				}
-			}
 		}
 	}
-}

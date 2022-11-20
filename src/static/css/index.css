@@ -19,7 +19,7 @@ body {
   width: 100%;
   overflow: hidden;
 }
-.container .login {
+.container .card {
   display: flex;
   padding: 40px;
   min-width: 450px;
@@ -32,7 +32,7 @@ body {
   background-color: #eeeeee;
   position: relative;
 }
-.container .login::before {
+.container .card::before {
   content: "";
   position: absolute;
   border-radius: 10px;
@@ -42,38 +42,38 @@ body {
   opacity: 0.3;
   z-index: -1;
 }
-.container .login-header {
+.container .card-header {
   width: calc(100% - 20px);
   display: flex;
   justify-content: center;
   align-content: end;
 }
-.container .login-header h1 {
+.container .card-header h1 {
   font-size: 2.5em;
   margin: 0;
   color: #456379;
 }
-.container .login-content {
+.container .card-content {
   width: 100%;
   display: flex;
 }
-.container .login-content .login-form {
+.container .card-content .login-form {
   display: flex;
   gap: 20px;
   width: 100%;
   padding: 20px 40px;
   flex-direction: column;
 }
-.container .login-content .login-form .form-control {
+.container .card-content .login-form .form-control {
   display: flex;
   flex-direction: column;
   color: #456379;
   background-color: #eeeeee;
 }
-.container .login-content .login-form .form-control:hover {
+.container .card-content .login-form .form-control:hover {
   color: #548ca8;
 }
-.container .login-content .login-form .form-control label:not(.checkbox-label) {
+.container .card-content .login-form .form-control label:not(.checkbox-label) {
   display: inline-block;
   background-color: #eeeeee;
   margin-bottom: 10px;
@@ -82,11 +82,11 @@ body {
   transform: translate(2em, -0.6em);
   font-size: 0.9em;
 }
-.container .login-content .login-form .form-control label:not(.checkbox-label).invalid {
+.container .card-content .login-form .form-control label:not(.checkbox-label).invalid {
   color: #b50505;
 }
-.container .login-content .login-form .form-control input[type=text],
-.container .login-content .login-form .form-control input[type=password] {
+.container .card-content .login-form .form-control input[type=text],
+.container .card-content .login-form .form-control input[type=password] {
   border: 1px solid #456379;
   height: 55px;
   padding: 0 2rem;
@@ -96,30 +96,30 @@ body {
   font-size: 18px;
   border-radius: 100px;
 }
-.container .login-content .login-form .form-control input[type=text]:-webkit-autofill,
-.container .login-content .login-form .form-control input[type=password]:-webkit-autofill {
+.container .card-content .login-form .form-control input[type=text]:-webkit-autofill,
+.container .card-content .login-form .form-control input[type=password]:-webkit-autofill {
   -webkit-background-clip: text;
 }
-.container .login-content .login-form .form-control input[type=text].invalid,
-.container .login-content .login-form .form-control input[type=password].invalid {
+.container .card-content .login-form .form-control input[type=text].invalid,
+.container .card-content .login-form .form-control input[type=password].invalid {
   border-color: #b50505;
 }
-.container .login-content .login-form .form-control .validation-message {
+.container .card-content .login-form .form-control .validation-message {
   padding-left: 40px;
   color: #b50505;
   font-size: 0.8em;
 }
-.container .login-content .login-form .form-control .checkbox {
+.container .card-content .login-form .form-control .checkbox {
   display: flex;
   align-items: center;
 }
-.container .login-content .login-form .form-control .checkbox-label {
+.container .card-content .login-form .form-control .checkbox-label {
   padding-left: 10px;
 }
-.container .login-content .login-form .form-control .checkbox-label:hover {
+.container .card-content .login-form .form-control .checkbox-label:hover {
   cursor: pointer;
 }
-.container .login-content .login-form .form-control .checkbox input[type=checkbox] {
+.container .card-content .login-form .form-control .checkbox input[type=checkbox] {
   margin: 0;
   padding: 0;
   width: 20px;
@@ -127,11 +127,25 @@ body {
   accent-color: #456379;
   border-color: #456379;
 }
-.container .login-content .login-form .form-control .checkbox input[type=checkbox]:hover {
+.container .card-content .login-form .form-control .checkbox input[type=checkbox]:hover {
   accent-color: #548ca8;
   cursor: pointer;
 }
-.container .login-content .login-form button {
+.container .card-content .login-form .form-control .forgot-password {
+  padding-left: 20px;
+  display: flex;
+  justify-content: start;
+}
+.container .card-content .login-form .form-control .forgot-password a {
+  text-decoration: none;
+  color: #456379;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.container .card-content .login-form .form-control .forgot-password a:hover {
+  color: #548ca8;
+}
+.container .card-content .login-form button {
   border: none;
   background: #456379;
   color: #eeeeee;
@@ -142,19 +156,18 @@ body {
   height: 55px;
   cursor: pointer;
 }
-.container .login-content .login-form button:hover {
+.container .card-content .login-form button:hover {
   background: #548ca8;
 }
-.container .login-footer {
+.container .card-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   padding: 0 40px;
-  gap: 15px;
 }
-.container .login-footer .line {
+.container .card-footer .line {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,7 +176,7 @@ body {
   color: #548ca8;
   /*  new lines  */
 }
-.container .login-footer .line:before {
+.container .card-footer .line:before {
   content: " ";
   display: block;
   height: 0.5px;
@@ -173,7 +186,7 @@ body {
   left: 0;
   background: #548ca8;
 }
-.container .login-footer .line:after {
+.container .card-footer .line:after {
   content: " ";
   display: block;
   height: 0.5px;
@@ -183,49 +196,44 @@ body {
   right: 0;
   background: #548ca8;
 }
-.container .login-footer .forgot-password {
+.container .card-footer .social-login {
   display: flex;
-  justify-content: center;
-}
-.container .login-footer .forgot-password a {
-  text-decoration: none;
-  color: #456379;
-  font-size: 0.9rem;
-  font-weight: 300;
-}
-.container .login-footer .forgot-password a:hover {
-  color: #548ca8;
-}
-.container .login-footer .social-login {
-  display: flex;
+  padding-top: 10px;
   width: 50%;
   min-width: 220px;
-  height: 40px;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   transition: 0.3s;
+  gap: 30px;
 }
-.container .login-footer .social-login a {
+.container .card-footer .social-login a {
+  border-radius: 100px;
   text-decoration: none;
-  padding-left: 15px;
   color: #456379;
   transition: ease 0.3s;
 }
-.container .login-footer .social-login .image {
+.container .card-footer .social-login a:hover {
+  color: #548ca8;
+}
+.container .card .sign-up {
+  padding: 0;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #456379;
+}
+.container .card .sign-up p {
+  font-size: 0.9em;
+  color: #456379;
+}
+.container .card .sign-up a {
+  padding-left: 5px;
+  font-weight: 600;
   border-radius: 100px;
+  text-decoration: none;
+  color: #334257;
+  transition: ease 0.3s;
 }
-.container .login-footer .social-login .image img {
-  padding: 6px;
-  width: 34px;
-  height: 34px;
-}
-.container .login-footer .social-login:hover a {
+.container .card .sign-up a:hover {
   color: #548ca8;
-}
-.container .login-footer .social-login:hover .image {
-  background-color: #548ca8;
 }
